@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:wandeldagboek2025/core/config/firebase_init.dart';
 import 'package:provider/provider.dart';
 import 'core/config/app_config.dart';
 import 'core/services/logging_service.dart';
@@ -17,17 +17,11 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialiseer Firebase
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-
   // Laad environment variabelen
   await dotenv.load(fileName: ".env");
 
-  // Initialiseer logging
-  final loggingService = LoggingService();
-  await loggingService.initialize();
+  // Initialiseer Firebase
+  await FirebaseInitializer.initialize();
 
   runApp(const MyApp());
 }
