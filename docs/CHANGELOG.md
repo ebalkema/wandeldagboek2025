@@ -5,25 +5,6 @@ Alle belangrijke wijzigingen in dit project worden gedocumenteerd in dit bestand
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.0.0/),
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
-## [1.0.1] - 2024-03-20
-
-### Toegevoegd
-- Uitgebreide documentatie in docs/ map
-  - Projectstructuur documentatie
-  - Firebase integratie documentatie
-  - Firestore indexen documentatie
-
-### Gewijzigd
-- Firestore indexen geoptimaliseerd
-- Verbeterde error handling bij queries
-
-### Opgelost
-- Firestore index probleem met observations collectie (walkId, timestamp)
-- Probleemoplossing voor Firebase deployment issues
-
-### Beveiliging
-- Firestore security rules verbeterd
-
 ## [1.0.0] - 2024-03-19
 
 ### Toegevoegd
